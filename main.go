@@ -1,15 +1,13 @@
 package main
 
 import (
-	"fmt"
-
-    s "github.com/butbkadrug/multitracks-scraper-go/internal"
+	s "github.com/butbkadrug/multitracks-scraper-go/internal"
 )
 
 
 func main(){
 
-    url := "https://www.multitracks.com/songs/Jesus-Culture/Your-Love-Never-Fails-(Live)/Your-Love-Never-Fails/"
+    url := "https://www.multitracks.com/songs/Paul-Baloche/Paul-Baloche-Live/Hosanna---Praise-is-Rising-(Live)/"
 
     song, err := s.NewSong(url)
 
@@ -17,5 +15,14 @@ func main(){
         panic(err)
     }
 
-    fmt.Println(song)
+    params := &s.SaveProjectParams{
+        Template: "/home/butbkadrug/empty.RPP",
+        Dest: "/home/butbkadrug/",
+        Song: song,
+
+    }
+
+    if err = s.SaveProject(params); err != nil {
+        panic(err)
+    }
 }

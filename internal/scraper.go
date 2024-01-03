@@ -63,9 +63,16 @@ func NewSong(url string) (*Song, error) {
             case 0:
                 s.Key = value
             case 1:
+                if value[3:] == ",00" {
+                    value = value[:3]
+                }
+                value = strings.ReplaceAll(value, ",", ".")
+                if value[len(value)-1] == []byte("0")[0] {
+                    value = value[:len(value) -1]
+                }
                 s.Tempo = value
             case 2:
-                s.Signature = value
+                s.Signature = strings.ReplaceAll(value, "/", " ")
             case 3:
                 s.Length = value
 
