@@ -1,4 +1,5 @@
 # multitracks-scraper-go
+![Multitracks Scraper](https://butbkadrug.github.io/multitracks-scraper-go.jpeg)
 
 **Multitracks Scraper CLI Tool for Reaper DAW Projects**
 
