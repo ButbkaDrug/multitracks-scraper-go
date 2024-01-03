@@ -3,7 +3,10 @@
 
 **Multitracks Scraper CLI Tool for Reaper DAW Projects**
 
-![GitHub License](https://img.shields.io/github/license/ButbkaDrug/multitracks-scraper-go)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
+
 
 ## Overview
 
